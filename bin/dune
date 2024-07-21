@@ -1,0 +1,5 @@
+(executable
+ (public_name fuzzcaml)
+ (name main)
+ (libraries fuzzcaml lwt ezcurl-lwt)
+ (preprocess (pps lwt_ppx)))
