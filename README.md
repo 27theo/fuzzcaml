@@ -2,6 +2,8 @@
 
 Asynchronous URL fuzzer built in OCaml with `Lwt` and `Ezcurl`.
 
+![Screenshot of code and project output side by side](images/fuzzcaml.png)
+
 [See the code: bin/main.ml.](bin/main.ml)
 
 ## What is a URL fuzzer?
