@@ -2,6 +2,8 @@
 
 Asynchronous URL fuzzer built in OCaml with `Lwt` and `Ezcurl`.
 
+[See the code: bin/main.ml.](bin/main.ml)
+
 ## What is a URL fuzzer?
 
 A URL fuzzer is a security tool that automatically discovers hidden or unlinked
@@ -25,7 +27,7 @@ fuzzcaml -t <target_url> [-w <wordlist>] [-s <success_codes>]
   --help  Display this list of options
 ```
 
-Example:
+### Example:
 
 ```
 $ ./fuzzcaml -t https://www.google.com -w wordlists/cve_paths_short.txt -s 200,202,303
