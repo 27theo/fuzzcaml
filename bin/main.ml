@@ -34,12 +34,10 @@ let fuzz_site urls success_codes =
         let msg =
           if List.mem response.code success_codes then "Success" else "Fail"
         in
-        Printf.printf "[%d] %s %s\n%!" response.code msg url;
-        Lwt.return_unit
+        Lwt_io.printf "[%d] %s %s\n%!" response.code msg url
     | Error (code, err_str) ->
         let code = Curl.int_of_curlCode code in
-        Printf.printf "Curl error %d : %s\n  %s\n" code url err_str;
-        Lwt.return_unit
+        Lwt_io.printf "Curl error %d : %s\n  %s\n" code url err_str
   in
 
   (* Iterate and wait *)
